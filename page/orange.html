@@ -1,0 +1,53 @@
+
+	
+	<div class="layout-50 clear-fix overflow-fix">
+	
+		<div class="layout-50-left">
+		
+			<h3>re::coders - быстрая разработка сайтов</h3>
+			<div id="map"></div>
+			
+			<br/>
+			
+			<h3>re::coders studio</h3>
+			<p>
+				Санкт-Петербург/Москва, Россия
+			</p>
+			
+			<ul class="no-list contact-list">
+				<li class="contact-list-phone"><span>Phone:</span> +7.934.341.67.02</li>
+				<li class="contact-list-mail"><span>Mail:</span> ask@re-coders.com</li>
+				<li class="contact-list-fax"><span>Blog:</span> <a href="/blog" target="_blank">http://re-coders.com/blog</a></li>
+			</ul>
+		
+		</div>
+
+		<div class="layout-50-right">
+		
+			<h3>Быстрое сообщение</h3>
+		
+			<form name="contact" id="contact" action="/send.php" method="post">
+				
+				<div>
+				
+					<div class="form-line block">
+						<input type="text" name="contact-user-name" id="contact-user-name" value="Ваше имя" onfocus="clearInput(this,'focus','Ваше имя')" onblur="clearInput(this,'blur','Ваше имя')"/>	
+					</div>
+					<div class="form-line block">
+						<input type="text" name="contact-user-email" id="contact-user-email" value="Ваш E-mail" onfocus="clearInput(this,'focus','Ваш E-mail')" onblur="clearInput(this,'blur','Ваш E-mail')"/>	
+					</div>					
+					<div class="form-line block">
+						<textarea rows="0" cols="0" name="contact-message" id="contact-message" onfocus="clearInput(this,'focus','Сообщение')" onblur="clearInput(this,'blur','Сообщение')">Сообщение</textarea>	
+					</div>
+					
+					<div class="form-line">
+						<a href="javascript:submitContactForm();" class="button block" id="contact-send">Отправить</a>
+					</div>
+				
+				</div>	
+
+			</form>
+		
+		</div>
+	
+	</div>
