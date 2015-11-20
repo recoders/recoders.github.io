@@ -167,6 +167,7 @@ height: 61px;
 float: left;
 background: url(../images/submit.png) left top no-repeat;
 border: none;
+cursor: pointer;
 }
 
 .submit:hover{
