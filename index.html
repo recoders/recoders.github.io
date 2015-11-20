@@ -12,7 +12,16 @@
 	Cufon.replace('a.logo', {fontFamily: 'Bebas'});
 	Cufon.replace('a.logo span', {fontFamily: 'Bell Gothic Std'});
 </script>
-
+<script type="text/javascript">
+    (function($,window){
+	$(document).ready(function(){
+	    if (window.location.hash == '#thanks') {
+		$('.h1_message').html("thanks!<span>We'll inform you soon!</span>");
+		window.location.hash = '';
+	    }
+	});
+    })(jQuery, this);
+</script>
 </head>
 <body>
 <div class="main_container">
@@ -20,7 +29,7 @@
 		<a class="logo" href="https://github.com/recoders">re-coders.com<span>fast &amp; beauty</span></a>
 	</div>
 	<div class="content">
-		<h1>hello.<span>We’re Coming Very Soon</span></h1>
+		<h1 class="h1_message">hello.<span>We’re Coming Very Soon</span></h1>
 		<div class="right_side">
 			<p>// <a href="#">info@re-coders.com</a><br/>// +7 931-364-3885</p>
 			<ul class="s_icons">
@@ -31,7 +40,13 @@
 		</div>
 	</div>
 </div>
-			<!-- Yandex.Metrika counter -->
+    <form action="//formspree.io/mike@re-coders.com" method="POST" class="email">
+	<input type="email" name="_replyto" class="field" onfocus="if(this.value=='Get Notified (Email Address)') this.value='';" onblur="if(this.value=='' || this.value==' ') this.value='Get Notified (Email Address)';" value="Get Notified (Email Address)" />
+	<input type="hidden" name="_next" value="//re-coders.com/#thanks" />
+	<input type="hidden" name="_subject" value="REcoders Maintanance" />
+	<input type="button" class="submit" onclick="return document.forms[0].sumbmit();" />
+    </form>
+<!-- Yandex.Metrika counter -->
 <script type="text/javascript">
     (function (d, w, c) {
         (w[c] = w[c] || []).push(function() {
