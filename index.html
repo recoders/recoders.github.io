@@ -16,8 +16,11 @@
     (function($,window){
 	$(document).ready(function(){
 	    if (window.location.hash == '#thanks') {
-		$('.h1_message').html("thanks!<span>We'll inform you soon!</span>");
-		window.location.hash = '';
+    		$('.h1_message').html("thanks!<span>We'll inform you soon!</span>");
+    		window.location.hash = '';
+    		setTimeout(function() {
+    		    window.location.reload(); 
+		    }, 5000);
 	    }
 	});
     })(jQuery, this);
