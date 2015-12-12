@@ -44,10 +44,10 @@
 	</div>
 </div>
     <form action="//formspree.io/mike@re-coders.com" method="POST" class="email">
-	<input type="email" name="_replyto" class="field" onfocus="if(this.value=='Get Notified (Email Address)') this.value='';" onblur="if(this.value=='' || this.value==' ') this.value='Get Notified (Email Address)';" value="Get Notified (Email Address)" />
+	<input type="email" id="_replyto" name="_replyto" class="field" placeholder="Get Notified (Email Address)" />
 	<input type="hidden" name="_next" value="//re-coders.com/#thanks" />
 	<input type="hidden" name="_subject" value="REcoders Maintanance" />
-	<input type="button" class="submit" onclick="return document.forms[0].submit();" />
+	<input type="button" class="submit" onclick="if ($('#_replyto').val() == '') { return false; } else { return document.forms[0].submit(); }" />
     </form>
 <!-- Yandex.Metrika counter -->
 <script type="text/javascript">
