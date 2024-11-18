@@ -13,7 +13,7 @@ export function Hero() {
         <p className="mb-12 text-indigo-200 font-pixel text-xl leading-relaxed">
           We craft digital experiences with retro charm and modern technology
         </p>
-        <RetroButton><a href='mailto:contact@re-coders.com'>START PROJECT →</a></RetroButton>
+        <RetroButton><a href='#contact'>START PROJECT →</a></RetroButton>
       </div>
     </header>
   );
