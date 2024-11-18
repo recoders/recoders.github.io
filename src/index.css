@@ -1,13 +1,30 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-indigo-950;
+    image-rendering: pixelated;
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer components {
+  .pixel-border {
+    @apply relative border-4 border-white shadow-[4px_4px_0_0_rgba(0,0,0,0.5)]
+           before:absolute before:inset-[-4px] before:border-4 before:border-black/50 before:-z-10;
+  }
+  
+  .pixel-button {
+    @apply pixel-border bg-indigo-600 px-6 py-3 text-white hover:bg-indigo-500 
+           active:translate-x-[4px] active:translate-y-[4px] active:shadow-none transition-all
+           hover:scale-105 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2;
+  }
+
+  .pixel-card {
+    @apply pixel-border bg-white p-6 hover:translate-y-[-4px] transition-transform
+           hover:shadow-[8px_8px_0_0_rgba(0,0,0,0.5)];
+  }
 }
